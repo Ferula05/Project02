@@ -1,0 +1,12 @@
+Class Descriptions: endl endl
+Fighter: Has a longsword, a crossbow, and 20 bolts. Has more starting hit points. endl
+Has an Armor Class of 18 due to wearing a shield and chainmail armor. Has +3 to endl
+STR and CON saving throws, and +2 to all melee damage they deal. Can attack endl
+twice on one turn. Can heal 1d10+5 hit points once per game. endl endl
+Wizard: Has a spellbook with 13 spell types. Can cast 4 first level spells, endl
+3 second level spells, and 2 third level spells, and can cast cantrips endl
+(level 0 spells) indefinitely. Has less starting hit points. Has an armor class endl
+of 10 + DEX due to not wearing any armor, and having to rely on dodging attacks. endl
+For spells that force the monster to make a save, the number to beat is 11 plus endl
+the Intelligence modifier of the Wizard. When an Abjuration spell is cast, the endl
+Wizard regains hit points. endl endl
