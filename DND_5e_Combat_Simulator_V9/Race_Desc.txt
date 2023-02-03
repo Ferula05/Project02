@@ -1,0 +1,8 @@
+Race Descriptions: endl endl
+Human: add +2 to highest ability score and +1 to all others. endl endl
+Elf: add +2 to highest ability score. Advantage on all DEX saving throws. endl
+Necrotic damage only does half its normal damage to you. endl endl
+Dwarf: add +2 to CON score. Advantage on all CON saving throws. endl
+Poison only does half its normal damage to you.  endl endl
+Orc: add +2 to STR and +1 to CON. If struck with a killing blow, can drop to endl
+one hit point instead of dying, but only once.  endl endl
