@@ -5,8 +5,8 @@
  *
  * Created on January 23, 2023, 3:03 AM
  * Purpose: This is my Project 2. It is a combat simulator for Dungeons and Dragons
- * Fifth Edition, and in its full version (project 2) is intended to run a small, randomly generated dungeon.
- * You can choose one of two classes, and can fight one type of monster.
+ * Fifth Edition, and in its full version (project 2) is intended to run a small dungeon.
+ * You can choose one of two classes, and can fight three monsters.
  * The classes come pre-made, and are level five,
  * with randomized stats each time. The monsters are Challenge
  * Rating 2, since they are fighting a single level 5 character.
@@ -64,8 +64,8 @@ int main(int argc, char** argv) {
     float pHlth, mHlth; //player and monster health.
     unsigned short str, con, dex, wis, intl, cha, Ac, Dc; //player scores and armor class, and spell save dc if needed. 
     short strSc, conSc, dexSc, wisSc, intlSc, chaSc; //ability modifiers.
+    
     //unsigned short d4, d6, d8, d10, d12, d20; //our dice set. In the future, these can be functions.
-    unsigned short r1, r2, r3, r4; //our 4 rolls for each stat.
     const short RSIZ = 4;
     unsigned short r[RSIZ];//The stat roller array
     unsigned short temp; //temporary variable, for number sorting.
@@ -1052,7 +1052,7 @@ void zombie(float &pHlth, short strSc, short conSc, short dexSc, short wisSc, sh
                                 short Zsave=d20()+zDex; //make the save.
                                 if(Zsave>=Dc){//if the save succeeds:
                                     int dmg = d6()+d6()+d6()+d6()+d6()+d6()+ d6()+d6(); 
-                                    cout << "The " << monNm << " succeeds on its save and takes " << sqrt(static_cast<float>(dmg)) << " fire damage.\n\n";
+                                    cout << "The " << monNm << " succeeds on its save and takes " << sqrt(static_cast<float>(dmg))*2 << " fire damage.\n\n";
                                     mHlth-=sqrt(static_cast<float>(dmg))*2; //the x2 is for the fire vulnerability.
                                 }
                                 else{ //if save fails:
@@ -2710,7 +2710,6 @@ void archer(float &pHlth, short strSc, short conSc, short dexSc, short wisSc, sh
         }
         
         
-        
     }while(pHlth>0&&mHlth>0); //keep fighting, to the death.
     
     if(pHlth<=0){//if the player has died:
@@ -2718,8 +2717,5 @@ void archer(float &pHlth, short strSc, short conSc, short dexSc, short wisSc, sh
     }
     else if(mHlth<=0){
         cout << "You have slain the " << monNm << ". You set up camp and are safe for the night.\n";
-    }
-    
-    
+    } 
 }
-
